@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/asets/css/style.css" />
+    <link rel="stylesheet" href="asets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,7 +13,7 @@
     />
     <title>Portfolio</title>
   </head>
-  <body>
+  <body class="no-scroll">
     <header class="header">
       <div class="container">
         <div class="header__inner">
@@ -460,10 +460,12 @@
             <div class="footer__copyright">
               &copy; 2018 UI43 - Free Templates
             </div>
+
             <div class="footer__social">
               <a href="#" target="_blank">
                 <img src="asets/images/footer/behance.svg" alt="#" width="24" />
               </a>
+
               <a href="#" target="_blank">
                 <img
                   src="asets/images/footer/dribbble.svg"
@@ -471,6 +473,7 @@
                   width="18"
                 />
               </a>
+
               <a href="#" target="_blank">
                 <img
                   src="asets/images/footer/linkedin.svg"
@@ -500,6 +503,7 @@
               </a>
             </div>
           </div>
+
           <nav class="footer__nav">
             <a class="footer__nav-link" href="#">Work</a>
             <a class="footer__nav-link" href="#">About Me</a>
@@ -514,6 +518,309 @@
     </footer>
 
     <!-- modals -->
-    <div class="modal"></div>
+    <div class="modal" style="display: none">
+      <div class="modal__dialog">
+        <button class="modal-close" type="button">
+          <img src="asets/images/modal/close.svg" alt="close" />
+        </button>
+        <div class="modal-work">
+          <div class="modal-work__priview">
+            <img
+              class="modal-work__photo"
+              src="https://placehold.co/790x780"
+              alt="#"
+            />
+          </div>
+
+          <div class="modal-work__content">
+            <div class="modal-work__header">
+              <h3 class="modal-work__title">Project title</h3>
+              <div class="modal-work__info">
+                Category <span class="modal-work__info-divider">|</span> 2022
+              </div>
+            </div>
+
+            <div class="modal-work__client">
+              <div class="modal-work__client-title">Client:</div>
+              <div class="modal-work__client-company">Creative Agency:</div>
+            </div>
+            <div class="modal-work__text">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+                voluptatum aliquam omnis dolorum magni totam animi labore,
+                exercitationem vitae nisi corrupti suscipit quasi. Distinctio
+                fugiat tenetur consectetur vero quaerat nulla!
+              </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+                voluptatum aliquam omnis dolorum magni totam animi labore,
+                exercitationem vitae nisi corrupti suscipit quasi. Distinctio
+                fugiat tenetur consectetur vero quaerat nulla!
+              </p>
+            </div>
+            <div class="modal-work__footer">
+              <button class="modal-work__btn" type="button">
+                <img
+                  src="asets/images/modal/left-arrow.svg"
+                  height="12"
+                  alt="Previous"
+                />
+                Previous
+              </button>
+              <button class="modal-work__btn" type="button">
+                Next
+                <img
+                  src="asets/images/modal/right-arrow.svg"
+                  height="12"
+                  alt="Next"
+                />
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-work__content -->
+        </div>
+
+        <!-- /.modal-work -->
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+
+    <div class="modal" style="display: none">
+      <div class="modal__dialog">
+        <button class="modal-close" type="button">
+          <img src="asets/images/modal/close.svg" alt="close" />
+        </button>
+
+        <div class="modal__content">
+          <h3 class="modal__title text__centr">Resume</h3>
+          <div class="text__centr">
+            <a class="btn btn--thin" href="#">Download pdf</a>
+            <a class="btn btn--thin" href="#">Print</a>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline__col timeline__col--left">
+              <h4 class="timeline__title">Expirience</h4>
+
+              <div class="timeline__item">
+                <time class="timelene__date" datetime="10-25-2022"
+                  >2017 - <b>Present</b></time
+                >
+                <h5 class="timeline__subtitle">Freelancer</h5>
+                <div class="timeline__position">Art director</div>
+                <div class="timeline__text">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sequi consequatur repellendus numquam possimus itaque! Odio
+                    veritatis illo asperiores sequi optio, suscipit deleniti, ut
+                    repudiandae soluta eius voluptate minus molestiae laborum!
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <time class="timelene__date" datetime="10-25-2022"
+                  >2016 - 2017</time
+                >
+                <h5 class="timeline__subtitle">The Best Agency</h5>
+                <div class="timeline__position">Art director</div>
+                <div class="timeline__text">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sequi consequatur repellendus numquam possimus itaque! Odio
+                    veritatis illo asperiores sequi optio, suscipit deleniti, ut
+                    repudiandae soluta eius voluptate minus molestiae laborum!
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <time class="timelene__date" datetime="10-25-2022"
+                  >2014 - 2016</time
+                >
+                <h5 class="timeline__subtitle">Better Agency</h5>
+                <div class="timeline__position">Senior UX/UI designer</div>
+                <div class="timeline__text">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sequi consequatur repellendus numquam possimus itaque! Odio
+                    veritatis illo asperiores sequi optio, suscipit deleniti, ut
+                    repudiandae soluta eius voluptate minus molestiae laborum!
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <time class="timelene__date" datetime="10-25-2022"
+                  >2012 - 2014</time
+                >
+                <h5 class="timeline__subtitle">Good Agency</h5>
+                <div class="timeline__position">Senior UX/UI designer</div>
+                <div class="timeline__text">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sequi consequatur repellendus numquam possimus itaque! Odio
+                    veritatis illo asperiores sequi optio, suscipit deleniti, ut
+                    repudiandae soluta eius voluptate minus molestiae laborum!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- /. col--left -->
+
+            <div class="timeline__col timeline__col--right">
+              <h4 class="timeline__title">Education</h4>
+
+              <div class="timeline__item">
+                <time class="timelene__date" datetime="10-25-2022"
+                  >2005 - 2010</time
+                >
+                <h5 class="timeline__subtitle">UX/UI designer</h5>
+                <div class="timeline__position">LA University USA</div>
+              </div>
+
+              <div class="timeline__item">
+                <time class="timelene__date" datetime="10-25-2022"
+                  >2002 - 2005</time
+                >
+                <h5 class="timeline__subtitle">UX/UI designer</h5>
+                <div class="timeline__position">LA Colege USA</div>
+              </div>
+
+              <h4 class="timeline__title">Skills</h4>
+
+              <div class="progress-bar">
+                <div class="progress-bar__item">
+                  <div class="progress-bar__left">
+                    <div class="progress-bar__bar">
+                      <div
+                        class="progress-bar__progress"
+                        style="width: 40%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="progress-bar__right">
+                    <div class="progress-bar__title">UX/UI designer</div>
+                  </div>
+                </div>
+                <!-- /.progress__item-->
+
+                <div class="progress-bar__item">
+                  <div class="progress-bar__left">
+                    <div class="progress-bar__bar">
+                      <div
+                        class="progress-bar__progress"
+                        style="width: 60%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="progress-bar__right">
+                    <div class="progress-bar__title">Illustrator</div>
+                  </div>
+                </div>
+                <!-- /.progress__item-->
+
+                <div class="progress-bar__item">
+                  <div class="progress-bar__left">
+                    <div class="progress-bar__bar">
+                      <div
+                        class="progress-bar__progress"
+                        style="width: 50%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="progress-bar__right">
+                    <div class="progress-bar__title">Photoshop</div>
+                  </div>
+                </div>
+                <!-- /.progress__item-->
+
+                <div class="progress-bar__item">
+                  <div class="progress-bar__left">
+                    <div class="progress-bar__bar">
+                      <div
+                        class="progress-bar__progress"
+                        style="width: 40%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="progress-bar__right">
+                    <div class="progress-bar__title">Sketch</div>
+                  </div>
+                </div>
+                <!-- /.progress__item-->
+              </div>
+
+              <h4 class="timeline__title">Awords</h4>
+
+              <div class="timeline__item">
+                <div class="timelene__date">
+                  2016 -
+                  <span class="timeline__awords"
+                    >The best web app interface</span
+                  >
+                </div>
+                <h5 class="timeline__subtitle">UX/UI designer</h5>
+                <div class="timeline__position">LA Colege USA</div>
+                <div class="timeline__text">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sequi consequatur repellendus numquam possimus itaque!
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <div class="timelene__date">
+                  2016 -
+                  <span class="timeline__awords"
+                    >The best web app interface</span
+                  >
+                </div>
+                <h5 class="timeline__subtitle">UX/UI designer</h5>
+                <div class="timeline__position">LA Colege USA</div>
+                <div class="timeline__text">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sequi consequatur repellendus numquam possimus itaque!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- /.timeline__col--right-->
+          </div>
+          <!-- /.timeline -->
+          <div class="text__centr">
+            <a class="btn" href="">HIRE ME</a>
+          </div>
+        </div>
+        <!-- /.modal__content -->
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal">
+      <div class="modal__dialog modal__dialog--sm">
+        <button class="modal-close" type="button">
+          <img src="asets/images/modal/close.svg" alt="close" />
+        </button>
+
+        <div class="contact">
+          <div class="contact__left">
+            <h3 class="modal__title">Resume</h3>
+          </div>
+          <div class="contact__right"></div>
+        </div>
+
+        <!-- /.modal__content -->
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
   </body>
 </html>
