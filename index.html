@@ -11,9 +11,17 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
     <title>Portfolio</title>
   </head>
-  <body class="no-scroll">
+  <body>
     <header class="header">
       <div class="container">
         <div class="header__inner">
@@ -35,7 +43,12 @@
             <a class="nav__link" href="#">About Me</a>
             <a class="nav__link" href="#">Blog</a>
             <a class="nav__link" href="#">Contact</a>
-            <a class="nav__link nav__link--btn" href="#">Hire Me</a>
+            <a
+              class="nav__link nav__link--btn"
+              href="#"
+              data-modal="#modal_form"
+              >Hire Me</a
+            >
           </nav>
         </div>
       </div>
@@ -71,8 +84,10 @@
               </a>
             </div>
             <div class="intro__btn">
-              <a class="btn" href="">HIRE ME</a>
-              <button class="btn" href="">SEE MY RESUME</button>
+              <a class="btn" href="#" data-modal="#modal_form">HIRE ME</a>
+              <button class="btn" href="#" data-modal="#modal_resume">
+                SEE MY RESUME
+              </button>
             </div>
           </div>
 
@@ -86,75 +101,85 @@
     <div class="works">
       <div class="container">
         <div class="works__nav">
-          <a href="#" class="works__nav-link">All</a>
-          <a href="#" class="works__nav-link">App</a>
-          <a href="#" class="works__nav-link">Website</a>
-          <a href="#" class="works__nav-link">Interaction</a>
+          <a href="#" class="works__nav-link" data-filter="all">all</a>
+          <a href="#" class="works__nav-link" data-filter="app">app</a>
+          <a href="#" class="works__nav-link" data-filter="website">website</a>
+          <a href="#" class="works__nav-link" data-filter="interaction"
+            >interaction</a
+          >
         </div>
 
         <div class="portfolio">
-          <div class="portfolio__col">
+          <div class="portfolio__col" data-cat="website">
             <div class="work">
-              <a
-                href="https://yaroshenko-oleg.github.io/full_sturbuzz/"
-                target="_blank"
-              >
-                <img
-                  class="work__img"
-                  src="asets/images/works/sturbuzz.jpg"
-                  alt="Sturbuzz"
-                />
-              </a>
+              <img
+                class="work__img"
+                src="asets/images/works/sturbuzz.jpg"
+                alt="Sturbuzz"
+                data-modal="#modal_project_1"
+              />
+
               <div class="work__content">
-                <div class="work__cat">Category</div>
+                <div class="work__cat">Category: Website</div>
                 <div class="work__title">
-                  Project "Sturbuzz"
+                  <a
+                    href="https://yaroshenko-oleg.github.io/full_sturbuzz/"
+                    target="_blank"
+                    >"Sturbuzz"</a
+                  >
                   <time class="work__date" datetime="2022-10-19">2022</time>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="portfolio__col">
+          <div class="portfolio__col" data-cat="website">
             <div class="work">
-              <a href="https://yaroshenko-oleg.github.io/moGo/" target="_blank">
-                <img
-                  class="work__img"
-                  src="asets/images/works/mogo.jpg"
-                  alt="MoGO"
-              /></a>
+              <img
+                class="work__img"
+                src="asets/images/works/mogo.jpg"
+                alt="MoGO"
+                data-modal="#modal_project_1"
+              />
               <div class="work__content">
-                <div class="work__cat">Category</div>
+                <div class="work__cat">Category: Website</div>
                 <div class="work__title">
-                  Project "MoGo"
+                  <a
+                    href="https://yaroshenko-oleg.github.io/moGo/"
+                    target="_blank"
+                  >
+                    "MoGo"</a
+                  >
                   <time class="work__date" datetime="2022-10-19">2022</time>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="portfolio__col">
+          <div class="portfolio__col" data-cat="website">
             <div class="work">
-              <a
-                href="https://yaroshenko-oleg.github.io/ActiveBox/"
-                target="_blank"
-              >
-                <img
-                  class="work__img"
-                  src="asets/images/works/active_box.jpg"
-                  alt="Active Box"
-              /></a>
+              <img
+                class="work__img"
+                src="asets/images/works/active_box.jpg"
+                alt="Active Box"
+                data-modal="#modal_project_1"
+              />
               <div class="work__content">
-                <div class="work__cat">Category</div>
+                <div class="work__cat">Category: Website</div>
                 <div class="work__title">
-                  Project "Active Box"
+                  <a
+                    href="https://yaroshenko-oleg.github.io/ActiveBox/"
+                    target="_blank"
+                  >
+                    "Active Box"</a
+                  >
                   <time class="work__date" datetime="2022-10-19">2022</time>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="portfolio__col">
+          <div class="portfolio__col" data-cat="app">
             <div class="work">
               <img
                 class="work__img"
@@ -162,7 +187,7 @@
                 alt="#"
               />
               <div class="work__content">
-                <div class="work__cat">Category</div>
+                <div class="work__cat">Category: App</div>
                 <div class="work__title">
                   Project ""
                   <time class="work__date" datetime="2022-10-19">2022</time>
@@ -171,7 +196,7 @@
             </div>
           </div>
 
-          <div class="portfolio__col">
+          <div class="portfolio__col" data-cat="interaction">
             <div class="work">
               <img
                 class="work__img"
@@ -179,7 +204,7 @@
                 alt="#"
               />
               <div class="work__content">
-                <div class="work__cat">Category</div>
+                <div class="work__cat">Category: interaction</div>
                 <div class="work__title">
                   Project ""
                   <time class="work__date" datetime="2022-10-19">2022</time>
@@ -188,7 +213,7 @@
             </div>
           </div>
 
-          <div class="portfolio__col">
+          <div class="portfolio__col" data-cat="app">
             <div class="work">
               <img
                 class="work__img"
@@ -196,7 +221,7 @@
                 alt="#"
               />
               <div class="work__content">
-                <div class="work__cat">Category</div>
+                <div class="work__cat">Category: App</div>
                 <div class="work__title">
                   Project ""
                   <time class="work__date" datetime="2022-10-19">2022</time>
@@ -253,8 +278,10 @@
               </p>
             </div>
             <div class="about__btn">
-              <a class="btn" href="">HIRE ME</a>
-              <button class="btn" href="">SEE MY RESUME</button>
+              <a class="btn" href="#" data-modal="#modal_form">HIRE ME</a>
+              <button class="btn" href="#" data-modal="#modal_resume">
+                SEE MY RESUME
+              </button>
             </div>
           </div>
           <!-- /.content -->
@@ -509,7 +536,10 @@
             <a class="footer__nav-link" href="#">About Me</a>
             <a class="footer__nav-link" href="#">Blog</a>
             <a class="footer__nav-link" href="#">Contact</a>
-            <a class="footer__nav-link footer__nav-link--btn" href="#"
+            <a
+              class="footer__nav-link footer__nav-link--btn"
+              href="#"
+              data-modal="#modal_form"
               >Hire Me</a
             >
           </nav>
@@ -518,18 +548,30 @@
     </footer>
 
     <!-- modals -->
-    <div class="modal" style="display: none">
+    <div class="modal" id="modal_project_1">
       <div class="modal__dialog">
-        <button class="modal-close" type="button">
+        <button class="modal-close" type="button" data-close>
           <img src="asets/images/modal/close.svg" alt="close" />
         </button>
         <div class="modal-work">
           <div class="modal-work__priview">
-            <img
-              class="modal-work__photo"
-              src="https://placehold.co/790x780"
-              alt="#"
-            />
+            <div data-slider="slick">
+              <div>
+                <img
+                  class="modal-work__photo"
+                  src="https://placehold.co/790x780"
+                  alt="#"
+                />
+              </div>
+
+              <div>
+                <img
+                  class="modal-work__photo"
+                  src="https://placehold.co/789x779"
+                  alt="#"
+                />
+              </div>
+            </div>
           </div>
 
           <div class="modal-work__content">
@@ -559,7 +601,7 @@
               </p>
             </div>
             <div class="modal-work__footer">
-              <button class="modal-work__btn" type="button">
+              <button class="modal-work__btn slickPrev" type="button">
                 <img
                   src="asets/images/modal/left-arrow.svg"
                   height="12"
@@ -567,7 +609,7 @@
                 />
                 Previous
               </button>
-              <button class="modal-work__btn" type="button">
+              <button class="modal-work__btn slickNext" type="button">
                 Next
                 <img
                   src="asets/images/modal/right-arrow.svg"
@@ -585,9 +627,9 @@
       <!-- /.modal__dialog -->
     </div>
 
-    <div class="modal" style="display: none">
+    <div class="modal" id="modal_resume">
       <div class="modal__dialog">
-        <button class="modal-close" type="button">
+        <button class="modal-close" type="button" data-close>
           <img src="asets/images/modal/close.svg" alt="close" />
         </button>
 
@@ -795,7 +837,7 @@
           </div>
           <!-- /.timeline -->
           <div class="text__centr">
-            <a class="btn" href="">HIRE ME</a>
+            <a class="btn" href="#" data-modal="#modal_form">HIRE ME</a>
           </div>
         </div>
         <!-- /.modal__content -->
@@ -804,15 +846,66 @@
     </div>
     <!-- /.modal -->
 
-    <div class="modal">
+    <div class="modal" id="modal_form">
       <div class="modal__dialog modal__dialog--sm">
-        <button class="modal-close" type="button">
+        <button class="modal-close" type="button" data-close>
           <img src="asets/images/modal/close.svg" alt="close" />
         </button>
 
         <div class="contact">
           <div class="contact__left">
-            <h3 class="modal__title">Resume</h3>
+            <h3 class="modal__title mb-0">Let's talk!</h3>
+            <div class="modal__subtitle">Call me or send me a request</div>
+
+            <ul class="contact__info">
+              <li class="contact__info-item">
+                <img
+                  class="contact__info-icon"
+                  src="asets/images/modal/phone.svg"
+                  alt="phone"
+                  height="14"
+                />
+                (063)000-00-00
+              </li>
+              <li class="contact__info-item">
+                <img
+                  class="contact__info-icon"
+                  src="asets/images/modal/mail.svg"
+                  alt="mail"
+                  height="14"
+                />
+                test1538@ukr.net
+              </li>
+            </ul>
+
+            <form class="form" action="/" method="post">
+              <div class="form__group">
+                <label class="form__label" for="input-email"
+                  >Address e-mail</label
+                >
+                <input
+                  class="form__input"
+                  type="text"
+                  name="input-email"
+                  id="input-email"
+                  placeholder="Address e-mail"
+                />
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="input-text">Request</label>
+
+                <textarea
+                  class="form__textarea"
+                  name="input-text"
+                  id="input-text"
+                  placeholder="type your request..."
+                ></textarea>
+              </div>
+              <div class="text-right">
+                <button class="btn" type="submit">Send</button>
+              </div>
+            </form>
           </div>
           <div class="contact__right"></div>
         </div>
@@ -822,5 +915,12 @@
       <!-- /.modal__dialog -->
     </div>
     <!-- /.modal -->
+
+    <!-- JS -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="asets/js/script.js"></script>
   </body>
 </html>
