@@ -109,4 +109,16 @@ $(function () {
 
     currentSlider.slick("slickNext");
   });
+
+  /* burger 
+  ======================*/
+
+  const navToggle = $("#navToggle");
+  const nav = $("#nav");
+
+  navToggle.on("click", function (event) {
+    event.preventDefault();
+
+    nav.toggleClass("show");
+  });
 });

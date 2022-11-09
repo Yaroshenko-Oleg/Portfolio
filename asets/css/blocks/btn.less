@@ -38,12 +38,19 @@
 
   + .btn {
     margin-left: 15px;
+
+    @media @tablet {
+      font-size: 1rem;
+      min-width: 130px;
+      padding: 1em 1.5em;
+    }
   }
 
   /* modificators */
   &--work {
     min-width: 0;
     padding: 0.6em 1.1em;
+
     font-size: 0.94rem;
     font-weight: 700;
     border-color: @black;
@@ -55,5 +62,15 @@
     min-width: 145px;
 
     font-size: 0.8rem;
+  }
+
+  @media @mobail-sm {
+    display: block;
+    width: 100%;
+
+    + .btn {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
   }
 }

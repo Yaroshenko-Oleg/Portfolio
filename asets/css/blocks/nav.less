@@ -2,13 +2,34 @@
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
   align-items: center;
+
+  @media @mobail {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: auto;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+
+    display: none;
+    background-color: #fff;
+
+    text-align: center;
+
+    &.show {
+      display: flex;
+    }
+  }
 }
 
 .nav__link {
-  //padding: 10px 30px;
-  margin-left: 30px;
+  margin-left: 2rem;
 
   position: relative;
 
@@ -18,8 +39,7 @@
   font-weight: 700;
   text-decoration: none;
 
-  //border: 3px solid transparent;
-  border-radius: 20px;
+  //border-radius: 20px;
 
   &:after {
     content: "";
@@ -34,6 +54,10 @@
     z-index: 1;
 
     transition: width 0.3s linear;
+
+    @media @mobail {
+      display: none;
+    }
   }
 
   &:hover:not(.nav__link--btn) {
@@ -53,8 +77,21 @@
       color: @white;
     }
   }
+
+  @media @mobail {
+    width: 100%;
+
+    margin-left: 0;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .nav__link:first-child {
   margin-left: 0;
+}
+
+.nav__link:last-child {
+  @media @mobail {
+    margin-bottom: 0.5rem;
+  }
 }

@@ -2,22 +2,51 @@
 
 .intro__inner {
   display: flex;
-  padding-top: 100px;
-  padding-bottom: 120px;
+  padding-top: 6.6rem;
+  padding-bottom: 19rem;
   border-bottom: 1px solid fade(@gray, 30%);
   position: relative;
 
   background: url("../images/intro/symbol.png") right bottom no-repeat;
+
+  @media @tablet {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    background-size: 415px auto;
+  }
+
+  @media @mobail {
+    margin-top: 70px;
+
+    background-size: 300px auto;
+  }
+
+  @media @mobail-sm {
+    background: none;
+  }
 }
 
 .intro__content {
   width: 50%;
+
+  @media @mobail {
+    width: 60%;
+  }
+
+  @media @mobail-sm {
+    width: 100%;
+  }
 }
 
 .intro__suptitle {
   font-size: 2.13rem;
   font-weight: 200;
   color: @black;
+
+  @media @tablet {
+    font-size: 2rem;
+  }
 }
 
 .intro__title {
@@ -25,6 +54,10 @@
   font-size: 3rem;
   font-weight: 700;
   color: @black;
+
+  @media @tablet {
+    font-size: 2.5rem;
+  }
 }
 
 .intro__text {
@@ -33,6 +66,10 @@
   font-size: 1.2rem;
   font-weight: 300;
   color: fade(@black, 70%);
+
+  @media @tablet {
+    font-size: 1rem;
+  }
 }
 
 .intro__photo {
@@ -40,4 +77,17 @@
   bottom: -1px;
   right: 0;
   z-index: 1;
+
+  @media @tablet {
+    width: 350px;
+    right: 25px;
+  }
+
+  @media @mobail {
+    width: 300px;
+  }
+
+  @media @mobail-sm {
+    display: none;
+  }
 }

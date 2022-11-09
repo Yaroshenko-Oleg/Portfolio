@@ -7,21 +7,36 @@
 
 .footer__inner {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .footer__credits {
   display: flex;
   align-items: center;
+
+  @media @tablet {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  @media @mobail-sm {
+    flex-direction: column;
+  }
 }
 
 .footer__copyright {
-  font-size: 00.94rem;
+  font-size: 0.94rem;
   color: #bbbbcc;
 
   border-right: 1px solid fade(@gray, 35%);
   padding-right: 0.8rem;
   margin-right: 1rem;
+
+  @media @mobail-sm {
+    border-right: 0;
+  }
 }
 
 .footer__social {
@@ -31,6 +46,14 @@
   a {
     margin-right: 1rem;
     text-decoration: none;
+
+    @media @tablet {
+      margin: 0 0.5rem;
+    }
+  }
+
+  @media @mobail-sm {
+    margin-top: 1rem;
   }
 }
 
@@ -38,6 +61,12 @@
   display: flex;
   align-items: center;
   font-size: 0.94rem;
+
+  @media @tablet {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .footer__nav-link {
@@ -61,5 +90,9 @@
       background-color: #bbbbcc;
       color: @black;
     }
+  }
+
+  @media @tablet {
+    margin: 0 0.5rem 1rem;
   }
 }
